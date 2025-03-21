@@ -1,0 +1,5 @@
+@media (max-width: 480px) {
+  .volunteer-page .mobile-bg-image {
+    display: none;
+  }
+}
