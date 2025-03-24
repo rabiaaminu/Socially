@@ -1,0 +1,137 @@
+.hamburger {
+  display: none;
+}
+header {
+  background-color: var(--blue-color);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.container {
+  width: 1440px;
+  max-width: 96%;
+  margin: auto;
+  padding: 0 16px;
+}
+
+/* .logo-container {
+  margin-right: 16px;
+} */
+
+.logo {
+  /* width: 100px;
+  height: 100px;
+  object-fit: contain; */
+  width: 120px;
+  height: 25px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 32px;
+  color: var(--background-color);
+  text-decoration: none;
+  position: relative;
+}
+.nav-item:hover {
+  color: #66b2ff;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 40%;
+  height: 1px;
+  background-color: #66b2ff;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* .user-icon {
+  margin-left: 16px;
+} */
+
+.header-icon {
+  width: 45px;
+  height: 45px;
+}
+
+.user-icon:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .hamburger {
+    display: block;
+  }
+  .logo {
+    width: 80px;
+    height: 15px;
+  }
+
+  header .bar {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    margin: 4px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--background-color);
+  }
+  header .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  header .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  header .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  header .nav-links {
+    flex-direction: column;
+    position: fixed;
+    left: -130%;
+    top: 90px;
+    background-color: var(--blue-color);
+    gap: 50px;
+    width: 100%;
+    text-align: left;
+    margin: auto;
+    padding-left: 0px;
+    padding-bottom: 40px;
+    margin-top: -20px;
+    transition: 0.3s;
+    height: 100vh;
+    padding: 30px 30px 30px 45px;
+    justify-content: flex-start;
+  }
+
+  header .active {
+    left: 0;
+  }
+
+  .header-icon {
+    width: 32px;
+    height: 32px;
+  }
+}

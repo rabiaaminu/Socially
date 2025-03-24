@@ -1,0 +1,126 @@
+.user-header .nav-item.active::after {
+  display: none !important;
+}
+.user-dashboard {
+  margin-top: 130px;
+  margin-bottom: 40px;
+}
+.user-section {
+  display: flex;
+
+  box-shadow: 0px 0px 10px rgba(146, 39, 39, 0.2);
+  gap: 30px;
+  border-radius: 20px;
+}
+
+.user-dashboard-section {
+  /* background-color: aliceblue; */
+  position: relative;
+
+  transform: translate(-2.5%, 0%);
+}
+
+.ud-container {
+  width: 1440px;
+  max-width: 96%;
+  margin: auto;
+  padding: 0 16px;
+}
+.ud-container h1 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin-bottom: 30px;
+}
+.user-dashboard-container {
+  width: 1440px;
+  max-width: 96%;
+  margin: auto;
+  padding: 0 16px;
+}
+
+.sidebar {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  width: 279px;
+  height: 786px;
+
+  border-radius: 20px;
+  justify-content: space-between;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  box-shadow: 4px 4px 15px 0px #00000026;
+  border-right: 3px solid #00000026;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar-nav span.icon {
+  width: 20px;
+  height: 20px;
+}
+.sidebar-nav span.icon img {
+  width: 20px;
+  height: 20px;
+}
+.sidebar-nav a {
+  text-decoration: none;
+  color: #6c757d;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 30px;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--background-color);
+  border: none;
+  gap: 10px;
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0;
+  color: #666666;
+}
+button.active {
+  color: var(--blue-color);
+  border-left: 4px solid var(--blue-color); /* changed to border-left */
+
+  background-color: #dceeff;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 30px 50px 30px 30px;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 48px;
+  padding: 48px 30px 30px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  border-left: 3px solid #00000026;
+}

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import MainBg from "../components/MainBg";
 import Button from "../components/Button";
-import "./ConfirmEmail.css";
+import "./VerifyCode.css";
 
-const ConfirmEmail = (index, e) => {
+const ConfirmCode = (index, e) => {
   const [code, setCode] = useState(["", "", "", "", "", ""]);
   const handleCodeChange = (index, value) => {
     if (/^[0-9]$/.test(value) || value === "") {
@@ -22,16 +22,14 @@ const ConfirmEmail = (index, e) => {
   };
 
   return (
-    <div className="main-email-confirm">
-      <div className="confirm-email-container confirm-email-page">
-        {/* Left Part: Reusable MainBg Component */}
-        <div className="confirm-email-left">
+    <div className="main-verify-code">
+      <div className="verify-code-container verify-code-page">
+        <div className="verify-code-left">
           <MainBg />
         </div>
 
-        {/* Right Part: Email Confirmation Form */}
-        <div className="confirm-email-right">
-          <h1>Confirm Your Email</h1>
+        <div className="verify-code-right">
+          <h1>Reset your Password</h1>
           <p>Please input the six digit code that was sent to your email</p>
           <div className="code-inputs">
             {[...Array(6)].map((digit, index) => (
@@ -47,8 +45,8 @@ const ConfirmEmail = (index, e) => {
               />
             ))}
           </div>
-          <Button type="regular" className="sign-up-button">
-            Sign Up
+          <Button type="regular" className="reset-password">
+            Reset Password
           </Button>
         </div>
       </div>
@@ -56,4 +54,4 @@ const ConfirmEmail = (index, e) => {
   );
 };
 
-export default ConfirmEmail;
+export default ConfirmCode;

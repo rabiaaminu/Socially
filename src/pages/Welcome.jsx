@@ -7,30 +7,31 @@ import "./Welcome.css"; // i Imported the CSS for this component
 const Welcome = () => {
   const navigate = useNavigate();
   const handleRegularClick = () => {
-    navigate("/register");
+    navigate("/create-account");
   };
   const handleVolunteerClick = () => {
     navigate("/volunteer");
   };
 
   return (
-    <div className="welcome-container">
-      {/* ths is the Left Part: Reusable Bg Component */}
-      <div className="welcome-left">
-        <Bg />
-      </div>
+    <div className="main-welcome">
+      <div className="welcome-container">
+        {/* ths is the Left Part: Reusable Bg Component */}
+        <div className="welcome-left">
+          <Bg />
+        </div>
 
-      {/* this is the Right Part: Welcome Text and Buttons */}
-      <div className="welcome-right">
-        <h1>Welcome to Socially</h1>
-        <p>Please select the type of account you would like to create</p>
-        <Button type="regular" onClick={handleRegularClick}>
-          Regular Account
-        </Button>
+        <div className="welcome-right">
+          <h1>Welcome to Socially</h1>
+          <p>Please select the type of account you would like to create</p>
+          <Button type="regular" onClick={handleRegularClick}>
+            Regular Account
+          </Button>
 
-        <Button type="volunteer" onClick={handleVolunteerClick}>
-          Volunteer Account
-        </Button>
+          <Button type="volunteer" onClick={handleVolunteerClick}>
+            Volunteer Account
+          </Button>
+        </div>
       </div>
     </div>
   );

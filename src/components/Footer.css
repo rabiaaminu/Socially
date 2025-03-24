@@ -1,0 +1,124 @@
+footer {
+  background-color: var(--blue-color);
+  padding: 80px 0px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: center;
+  width: 1440px;
+  max-width: 70%;
+  margin: auto;
+  padding: 0 16px;
+}
+.footer-main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 350px;
+  width: 50%;
+  text-align: center;
+}
+
+.footer-main-section h1 {
+  font-family: Merriweather;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 2.8px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--background-color);
+  opacity: 60%;
+}
+
+.footer-main-section h2 {
+  font-family: Abhaya Libre;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--background-color);
+}
+
+.footer-main-section p {
+  opacity: 0.8;
+
+  font-family: Merriweather;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 33px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--background-color);
+}
+
+.footer-main-section .footer-btn {
+  width: 197px;
+  height: 60px;
+  top: 327px;
+  left: 621px;
+  border-radius: 30px;
+  background: #66b2ff;
+  font-family: Merriweather;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--background-color);
+}
+
+.footer-main-section .footer-copyright {
+  display: flex;
+  align-items: center;
+  font-family: Merriweather;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--background-color);
+  gap: 1px;
+  opacity: 0.8;
+}
+
+.footer-copyright img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-icons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.footer-navlinks {
+  margin-left: 130px;
+  display: flex;
+  gap: 40px;
+  font-family: Merriweather;
+
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: var(--background-color);
+}
+
+.footer-navlinks a {
+  color: var(--background-color);
+  text-decoration: none;
+}
+.footer-si {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}

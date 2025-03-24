@@ -1,0 +1,150 @@
+.avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid var(--blue-color);
+}
+
+.avatar-container .camera-btn {
+  padding: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--blue-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 50%;
+  width: 30%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.avatar-container .camera-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.avatar-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.upload-btn,
+.delete-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 179px;
+  height: 49px;
+
+  border-radius: 10px;
+  padding: 13px 17px;
+
+  gap: 10px;
+  margin: 0px;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.upload-btn {
+  background-color: var(--blue-color);
+  color: #fff;
+  border: none;
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+}
+
+.user-form {
+  max-width: 887px;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-info-form {
+  display: flex;
+  width: 50%;
+}
+
+.form-group input.user-info-fn {
+  width: 210px;
+}
+
+.user-form .form-group {
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.user-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.user-form .form-group input {
+  font-family: Merriweather;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  height: 50px;
+  color: var(--input-color);
+}
+
+.phone-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.phone-input select {
+  width: 100px;
+}
+
+.user-form .edit-btn {
+  background-color: var(--blue-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 109px;
+  height: 49px;
+}

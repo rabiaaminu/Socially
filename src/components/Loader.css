@@ -1,0 +1,30 @@
+.loader-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 10%;
+
+  background: conic-gradient(#0000 10%, var(--color-light--2));
+
+  animation: zoom 3s infinite ease-in-out;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 480px) {
+  .loader {
+    width: 30%;
+  }
+}

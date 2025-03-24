@@ -1,9 +1,9 @@
-.main-email-confirm {
+.main-verify-code {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.confirm-email-container {
+.verify-code-container {
   display: flex;
   margin: 0px auto 0px auto;
   border-radius: 10px;
@@ -15,11 +15,11 @@
   padding: 50px 0 50px;
 }
 
-.confirm-email-left {
+.verify-code-left {
   flex: 1;
 }
 
-.confirm-email-right {
+.verify-code-right {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -29,12 +29,12 @@
   padding: 20px;
 }
 
-.confirm-email-right h1 {
+.verify-code-right h1 {
   font-size: 24px;
   margin-bottom: 15px;
 }
 
-.confirm-email-right p {
+.verify-code-right p {
   color: var(--black-color);
   margin-bottom: 45px;
   font-family: Merriweather;
@@ -52,15 +52,15 @@
 }
 
 .code-input {
-  width: 70px;
-  height: 100px;
+  width: 80px;
+  height: 115px;
   text-align: center;
   font-size: 16px;
-  border: 1px solid var(--black-color);
-  border-radius: 5px;
+  border: 2px solid var(--black-color);
+  border-radius: 10px;
 }
 
-.sign-up-button {
+.reset-password {
   width: 100%;
   height: 50px;
 }
@@ -68,11 +68,11 @@
 /******* Mobile-specific styles  ***********/
 
 @media (max-width: 480px) {
-  .confirm-email-page .mobile-bg-image {
+  .verify-code-page .mobile-bg-image {
     display: none;
   }
 
-  .confirm-email-container {
+  .verify-code-container {
     width: 100%;
 
     border-radius: 0;
@@ -88,14 +88,14 @@
     top: -45px;
   }
 
-  .confirm-email-left {
+  .verify-code-left {
     flex: none;
     width: 100%;
 
     position: relative;
   }
 
-  .confirm-email-right {
+  .verify-code-right {
     flex: none;
     width: 100%;
     padding: 20px;
@@ -104,7 +104,7 @@
     position: relative;
   }
 
-  .confirm-email-right h1 {
+  .verify-code-right h1 {
     margin-bottom: 15px;
 
     font-family: Roboto;
@@ -115,7 +115,7 @@
     text-align: center;
   }
 
-  .confirm-email-right p {
+  .verify-code-right p {
     margin-bottom: 45px;
     font-family: Merriweather;
     font-weight: 400;
@@ -137,9 +137,5 @@
     font-size: 14px;
     border: 1px solid var(--black-color);
     border-radius: 10px;
-  }
-  .sign-up-button {
-    width: 100%;
-    height: 40px;
   }
 }

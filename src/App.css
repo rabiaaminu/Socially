@@ -1,31 +1,17 @@
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-  
-body {
-
-  font-family: Arial, sans-serif;
-}
-  
-.App {
+/* 
+.app {
   padding-top: 100px;
 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 
-
-
 /* **Mobile-specific styles * */
-@media (max-width: 480px) {
-  .App{
-    width:100%;
+/* @media (max-width: 480px) {
+  .app {
+    width: 100%;
     padding-top: unset;
     position: unset;
     top: unset;
@@ -33,9 +19,5 @@ body {
     transform: unset;
     display: flex;
     justify-content: center;
-
-
- 
-  }    
-
-}
+  }
+} */

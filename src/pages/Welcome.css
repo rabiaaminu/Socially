@@ -1,11 +1,18 @@
+.main-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .welcome-container {
   display: flex;
-  margin: 100px auto 50px auto;
+  margin: 0px auto 0px auto;
   border-radius: 10px;
   overflow: hidden;
   width: 1180px;
   max-width: 90%;
   gap: 90px;
+  padding: 50px 0 50px;
 }
 
 .welcome-left {
@@ -57,11 +64,6 @@
     gap: 0px;
     justify-content: center;
     overflow: visible;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: -45px;
     height: 100vh;
     display: flex;
     flex-direction: column;
