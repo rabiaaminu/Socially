@@ -6,7 +6,7 @@
 }
 
 .loader {
-  width: 10%;
+  width: 20%;
 
   background: conic-gradient(#0000 10%, var(--color-light--2));
 

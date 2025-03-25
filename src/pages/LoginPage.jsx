@@ -8,13 +8,22 @@ import "./LoginPage.css";
 import googleIcon from "../assets/google-icon.png";
 import appleIcon from "../assets/apple-icon.png";
 import { Link } from "react-router-dom";
+import LoaderFullPage from "../components/LoaderFullPage";
 
 export default function Login() {
-  // PRE-FILL FOR DEV PURPOSES
+  const [isLoading, setIsLoading] = useState(true);
+  //Guys PRE-FILL FOR DEV PURPOSES
   const [email, setEmail] = useState("jack@example.com");
   const [password, setPassword] = useState("qwerty");
   const { login, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // simulate a 2-second loading delay
+    return () => clearTimeout(timer);
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -42,6 +51,10 @@ export default function Login() {
       }
     }
   };
+
+  if (isLoading) {
+    return <LoaderFullPage />;
+  }
 
   return (
     <div className="main-login-page">

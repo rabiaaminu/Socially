@@ -46,7 +46,7 @@ const UserDashboard = () => {
   if (isLoading) {
     return (
       <div>
-        <Header className="user-head" />
+        <Header className="user-header" />
         <div className="user-dashboard">
           <div className="ud-container">
             <LoaderFullPage />
@@ -58,7 +58,7 @@ const UserDashboard = () => {
 
   return (
     <div>
-      <Header className="user-head" />
+      <Header className="user-header" />
       <div className="user-dashboard">
         <div className="ud-container">
           <h1>Account Settings</h1>

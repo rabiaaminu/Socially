@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import icon from "../assets/user-icon.png";
 import user from "../assets/user.png";
 import "./Header.css";
 
 const Header = () => {
+  const location = useLocation();
   const navigate = useNavigate();
   const [showNavLinks, setShowNavLinks] = useState(false);
   const [iconSrc, setIconSrc] = useState(icon);
@@ -53,7 +54,11 @@ const Header = () => {
           <NavLink
             to="/app"
             className={({ isActive }) =>
-              isActive ? "nav-item active" : "nav-item"
+              location.pathname === "/app/dashboard"
+                ? "nav-item"
+                : isActive
+                ? "nav-item active"
+                : "nav-item"
             }
           >
             Home

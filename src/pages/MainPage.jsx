@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-import { Outlet, useLocation } from "react-router-dom";
+
 import "./MainPage.css";
+import LoaderFullPage from "../components/LoaderFullPage";
 
 function MainPage() {
-  const location = useLocation();
+  const [isLoading, setIsLoading] = useState(true);
 
-  return (
-    <div>
-      {location.pathname === "/app" && <Header />}
-      <div className="user-header">
-        <Outlet />
-      </div>
-    </div>
-  );
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // simulate a 2-second loading delay
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoaderFullPage />;
+  }
+  return <Header />;
 }
 
 export default MainPage;
