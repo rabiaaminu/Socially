@@ -17,7 +17,11 @@ function MainPage() {
   if (isLoading) {
     return <LoaderFullPage />;
   }
-  return <Header />;
+  return (
+    <div>
+      <Header />;
+    </div>
+  );
 }
 
 export default MainPage;

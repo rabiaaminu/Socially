@@ -64,7 +64,7 @@ const Header = () => {
             Home
           </NavLink>
           <NavLink
-            to="/pages/CreateEvent"
+            to="/app/CreatedEvent"
             className={({ isActive }) =>
               isActive ? "nav-item active" : "nav-item"
             }
