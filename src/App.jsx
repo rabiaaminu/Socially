@@ -14,6 +14,8 @@ import MainPage from "./pages/MainPage";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import LoaderFullPage from "./components/LoaderFullPage";
 import UserDashboard from "./pages/UserDashboard";
+// import ResetPassword from "./pages/ResetPassword";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path="/create-account" element={<CreatAccount />} />
             <Route path="/confirm-email" element={<ConfirmEmail />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/reset-password" element={<ForgotPassword />} />
+            {/* <Route path="/new-password" element={<ResetPassword />} /> */}
 
             <Route path="/verify-code" element={<VerifyCode />} />
 
