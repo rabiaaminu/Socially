@@ -1,10 +1,29 @@
-import React, { useState } from "react";
-import avatar from "../assets/avatar.png";
+import React, { useRef, useState } from "react";
+import initialAvatar from "../assets/avatar.png";
 import cameraIcon from "../assets/camera.png";
 import "./UserInfo.css";
 import Button from "./Button";
 
 const UserForm = () => {
+  const fileInputRef = useRef(null);
+  const [avatar, setAvatar] = useState(initialAvatar);
+
+  const handleUploadClick = (e) => {
+    e.preventDefault();
+    fileInputRef.current.click();
+  };
+  const handleImageChange = (event) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      setAvatar(reader.result);
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
+
+  const handleDelete = () => {
+    setAvatar(initialAvatar);
+  };
+
   const [userData, setUserData] = useState({
     firstName: "",
     lastName: "",
@@ -27,14 +46,29 @@ const UserForm = () => {
       <div className="avatar-section">
         <div className="avatar-container">
           <img src={avatar} alt="User Avatar" className="avatar" />
-          <button className="camera-btn">
+          <button className="camera-btn" onClick={handleUploadClick}>
             {" "}
             <img src={cameraIcon} alt="Camera Icon" />
           </button>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            ref={fileInputRef}
+            style={{ display: "none" }}
+          />
         </div>
         <div className="avatar-actions">
-          <Button className="upload-btn">UPLOAD NEW</Button>
-          <Button className="delete-btn">DELETE AVATAR</Button>
+          <Button
+            className="upload-btn"
+            //onClick={handleUpload}//logic to send the image to server
+            type="button"
+          >
+            UPLOAD NEW
+          </Button>
+          <Button className="delete-btn" onClick={handleDelete} type="button">
+            DELETE AVATAR
+          </Button>
         </div>
       </div>
       <div className="form-row">

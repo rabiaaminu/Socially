@@ -25,6 +25,13 @@
   max-width: 96%;
   margin: auto;
   padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.ud-container .user-popup {
+  display: none;
 }
 .ud-container h1 {
   font-family: Roboto;
@@ -32,7 +39,6 @@
   font-size: 30px;
   line-height: 100%;
   letter-spacing: 0;
-  margin-bottom: 30px;
 }
 .user-dashboard-container {
   width: 1440px;
@@ -123,4 +129,93 @@ button.active {
   background-color: #fff;
   border-radius: 20px;
   border-left: 3px solid #00000026;
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 20px 0px 80px 0px !important;
+  }
+  .footer-main-section .footer-btn {
+    border-radius: 10px !important;
+
+    width: 180px !important;
+    height: 55px !important;
+  }
+  img.ft-line {
+    /* max-width: 80%; */
+    height: 3px !important;
+  }
+  .user-d-page .footer-last {
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .user-dashboard {
+    position: relative; /* Ensure it’s in the normal flow */
+    z-index: 2;
+  }
+
+  .ud-container .user-popup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  .ud-container .user-popup span {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #666666;
+  }
+  .main-content {
+    flex: 1;
+    padding: 25px 20px 20px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    border-left: 3px solid #00000026;
+  }
+  .user-section {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    gap: 110px;
+    z-index: 9999;
+    position: absolute;
+    padding-top: 38px;
+    padding-bottom: 168px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96%;
+    height: 65vh;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  button.logout-btn span {
+    width: 24px;
+    height: 24px;
+  }
+  .logout-btn {
+    padding: 30px 30px 30px 30px;
+  }
+
+  .user-dashboard-section {
+    transform: translate(0%, 0%);
+  }
+  .ud-container h1 {
+    font-size: 20px;
+  }
+  .user-dashboard {
+    margin-top: 120px;
+    margin-bottom: 40px;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
 }

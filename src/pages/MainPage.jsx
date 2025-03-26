@@ -3,6 +3,7 @@ import Header from "../components/Header";
 
 import "./MainPage.css";
 import LoaderFullPage from "../components/LoaderFullPage";
+import UserForm from "../components/UserInfo";
 
 function MainPage() {
   const [isLoading, setIsLoading] = useState(true);

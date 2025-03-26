@@ -29,7 +29,7 @@ function Footer() {
             2025 Socially
           </span>
         </div>
-        <div>
+        <div className="footer-last">
           <img src={line} alt="Logo" className="ft-line" />
 
           <div className="footer-icons">
